@@ -23,6 +23,34 @@
   text-align: right
 }
 
+.upper-right-ribbon::before {
+  content: '';
+  position: absolute;
+  left: 21px;
+  top: 2%;
+  z-index: 1000;
+  border-left: 5px solid #0a390b;
+  border-right: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  border-top: 5px solid #0a390b;
+  border-radius: 100%;
+  transform: rotate(45deg);
+}
+
+.upper-right-ribbon::after {
+  content: '';
+  position: absolute;
+  right: 5px;
+  bottom: 10%;
+  z-index: 10;
+  border-left: 5px solid #0a390b;
+  border-right: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  border-top: 5px solid #0a390b;
+  border-radius: 100%;
+  transform: rotate(135deg);
+}
+
 .upper-right-ribbon div {
   width: 250px;
   position: absolute;
@@ -94,20 +122,58 @@
   z-index:1000;
   text-align: right;
   border-radius: 0 20px;
+/*  box-sizing:border-box;
   border-bottom:3px solid red;
-  border-left:4px solid red;
+  border-left:4px solid red;*/
 }
 
 .svg {
   border-radius: 0 16px;
 }
 
+.lower-left-ribbon div {
+  height:175px;
+  width:175px;
+  position:absolute;
+  top:0;
+  left:0;
+}
+
+.lower-left-ribbon div::before {
+  content: '';
+  position: absolute;
+  left: 5px;
+  top: -3%;
+  z-index: 100000;
+  border-right: 5px solid #730305;
+  border-left: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  border-top: 5px solid #730305;
+  border-radius: 100%;
+  transform: rotate(-135deg);
+}
+
+.lower-left-ribbon div::after {
+  content: '';
+  position: absolute;
+  right: -2px;
+  top: 91.5%;
+  z-index: 1000;
+  border-right: 5px solid #730305;
+  border-left: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  border-top: 5px solid #730305;
+  border-radius: 100%;
+  transform: rotate(135deg);
+}
+
+
 .lower-left-ribbon::before {
   content: '';
   position: absolute;
   right: -8px;
-  top: 90%;
-  z-index: 10000;
+  top: 88%;
+  z-index: 1000;
   border-left: 10px solid red;
   border-right: 10px solid transparent;
   border-bottom: 10px solid red;
@@ -119,7 +185,7 @@
 .lower-left-ribbon::after {
   content: '';
   position: absolute;
-  left: -4px;
+  left: 0px;
   top: -8px;
   z-index: 10000;
   border-left: 10px solid red;
@@ -129,3 +195,7 @@
   border-radius: 100%;
   transform: rotate(45deg);
 }
+
+/*.lower-left-border {
+
+}*/
