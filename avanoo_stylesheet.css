@@ -11,7 +11,6 @@
   z-index:2000;
 }
 
-/*Make trapezoid rather than bar*/
 .upper-right-ribbon {
   height:200px;
   width:200px;
@@ -26,8 +25,8 @@
 .upper-right-ribbon::before {
   content: '';
   position: absolute;
-  left: 21px;
-  top: 2%;
+  left: 20px;
+  top: 4px;
   z-index: 1000;
   border-left: 5px solid #0a390b;
   border-right: 5px solid transparent;
@@ -35,13 +34,15 @@
   border-top: 5px solid #0a390b;
   border-radius: 100%;
   transform: rotate(45deg);
+  -ms-transform: rotate(45deg); /* IE 9 */
+  -webkit-transform: rotate(45deg); /* Safari */
 }
 
 .upper-right-ribbon::after {
   content: '';
   position: absolute;
-  right: 5px;
-  bottom: 10%;
+  right: 4px;
+  bottom: 20px;
   z-index: 10;
   border-left: 5px solid #0a390b;
   border-right: 5px solid transparent;
@@ -49,6 +50,8 @@
   border-top: 5px solid #0a390b;
   border-radius: 100%;
   transform: rotate(135deg);
+  -ms-transform: rotate(135deg); /* IE 9 */
+  -webkit-transform: rotate(135deg); /* Safari */
 }
 
 .upper-right-ribbon div {
@@ -63,6 +66,8 @@
   text-transform: uppercase;
   line-height: 50px;
   transform: rotate(45deg);
+  -ms-transform: rotate(45deg); /* IE 9 */
+  -webkit-transform: rotate(45deg); /* Safari */
   background: #79A70A;
   /*TODO: make box-shadow width smaller:*/
   box-shadow: inset 0px 0px 7px white, 0px 12px 25px rgba(0, 0, 0, 0.5);
@@ -77,8 +82,8 @@
 .upper-right-ribbon div::before {
   content: '';
   position: absolute;
-  left: -3px;
-  top: 93%;
+  left: 0px;
+  top: 85%;
   z-index: -1;
   border-left: 9px solid #6eb343;
   border-right: 9px solid transparent;
@@ -90,8 +95,8 @@
 .upper-right-ribbon div::after {
    content: '';
    position: absolute;
-   right: -4px;
-   top: 96%;
+   right: -1px;
+   top: 84%;
    z-index: -1;
    border-right: 10px solid #80ce4c;
    border-left: 10px solid transparent;
@@ -120,30 +125,36 @@
   left: -10px;
   bottom: -10px;
   z-index:1000;
-  text-align: right;
   border-radius: 0 20px;
-/*  box-sizing:border-box;
-  border-bottom:3px solid red;
-  border-left:4px solid red;*/
+
 }
 
 .svg {
-  border-radius: 0 16px;
+  border-radius: 0 20px;
+  position: absolute;
+  bottom: 3px;
+  left: 3px;
 }
 
 .lower-left-ribbon div {
   height:175px;
   width:175px;
   position:absolute;
-  top:0;
+  bottom:0;
   left:0;
+  box-sizing:border-box;
+  border-radius: 0 20px;
+  border-bottom:4px solid red;
+  border-left:4px solid red;
+/*  border-image:
+      linear-gradient(to right, red, white) 1 100%;*/
 }
 
 .lower-left-ribbon div::before {
   content: '';
   position: absolute;
-  left: 5px;
-  top: -3%;
+  left: 1px;
+  top: -4%;
   z-index: 100000;
   border-right: 5px solid #730305;
   border-left: 5px solid transparent;
@@ -151,13 +162,15 @@
   border-top: 5px solid #730305;
   border-radius: 100%;
   transform: rotate(-135deg);
+  -ms-transform: rotate(-135deg); /* IE 9 */
+  -webkit-transform: rotate(-135deg); /* Safari */
 }
 
 .lower-left-ribbon div::after {
   content: '';
   position: absolute;
-  right: -2px;
-  top: 91.5%;
+  right: -7px;
+  bottom: 2px;
   z-index: 1000;
   border-right: 5px solid #730305;
   border-left: 5px solid transparent;
@@ -165,6 +178,8 @@
   border-top: 5px solid #730305;
   border-radius: 100%;
   transform: rotate(135deg);
+  -ms-transform: rotate(135deg); /* IE 9 */
+  -webkit-transform: rotate(135deg); /* Safari */
 }
 
 
@@ -172,7 +187,7 @@
   content: '';
   position: absolute;
   right: -8px;
-  top: 88%;
+  top: 89%;
   z-index: 1000;
   border-left: 10px solid red;
   border-right: 10px solid transparent;
@@ -180,6 +195,8 @@
   border-top: 10px solid transparent;
   border-radius: 100%;
   transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg); /* IE 9 */
+  -webkit-transform: rotate(-45deg); /* Safari */
 }
 
 .lower-left-ribbon::after {
@@ -194,8 +211,6 @@
   border-top: 10px solid transparent;
   border-radius: 100%;
   transform: rotate(45deg);
+  -ms-transform: rotate(45deg); /* IE 9 */
+  -webkit-transform: rotate(45deg); /* Safari */
 }
-
-/*.lower-left-border {
-
-}*/
