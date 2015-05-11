@@ -13,10 +13,20 @@
 
     <div class="lower-left-ribbon">
       <!-- <div></div> -->
-      <svg height="210" width="500">
-        <polygon points="0,0 175,175 0,175"
-        stroke-linejoin="round"
-        style="fill:red;stroke:black;stroke-width:3" />
+      <svg class="svg" height="175" width="175">
+        <defs>
+          <linearGradient
+            id="myGradient"
+            x1="0%" x2="100%" y1="100%" y2="0%"
+          >
+            <stop offset="0%"  stop-color="#e78c7c"/>
+            <stop offset="30%" stop-color="#f22e2b"/>
+          </linearGradient>
+        </defs>
+        <polygon
+        points="0,0 175,175 0,175"
+        fill="url(#myGradient)"
+        />
       </svg>
     </div>
 
