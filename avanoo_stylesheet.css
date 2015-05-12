@@ -105,17 +105,11 @@
    border-radius: 100%;
 }
 
-.upper-right-ribbon div::after::after {
-   content: '';
-   position: absolute;
-   right: -4px;
-   top: 96%;
-   z-index: -1;
-   border-right: 10px solid black;
-   border-left: 10px solid transparent;
-   border-bottom: 10px solid transparent;
-   border-top: 10px solid black;
-   border-radius: 100%;
+.svg {
+  border-radius: 0 20px;
+  position: absolute;
+  bottom: 3px;
+  left: 3px;
 }
 
 .lower-left-ribbon {
@@ -129,11 +123,36 @@
 
 }
 
-.svg {
-  border-radius: 0 20px;
+.lower-left-ribbon::before {
+  content: '';
   position: absolute;
-  bottom: 3px;
-  left: 3px;
+  right: -8px;
+  bottom:0px;
+  z-index: 1000;
+  border-left: 10px solid red;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid red;
+  border-top: 10px solid transparent;
+  border-radius: 100%;
+  transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg); /* IE 9 */
+  -webkit-transform: rotate(-45deg); /* Safari */
+}
+
+.lower-left-ribbon::after {
+  content: '';
+  position: absolute;
+  left: 0px;
+  top: -8px;
+  z-index: 10000;
+  border-left: 10px solid red;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid red;
+  border-top: 10px solid transparent;
+  border-radius: 100%;
+  transform: rotate(45deg);
+  -ms-transform: rotate(45deg); /* IE 9 */
+  -webkit-transform: rotate(45deg); /* Safari */
 }
 
 .lower-left-ribbon div {
@@ -180,37 +199,4 @@
   transform: rotate(135deg);
   -ms-transform: rotate(135deg); /* IE 9 */
   -webkit-transform: rotate(135deg); /* Safari */
-}
-
-
-.lower-left-ribbon::before {
-  content: '';
-  position: absolute;
-  right: -8px;
-  top: 89%;
-  z-index: 1000;
-  border-left: 10px solid red;
-  border-right: 10px solid transparent;
-  border-bottom: 10px solid red;
-  border-top: 10px solid transparent;
-  border-radius: 100%;
-  transform: rotate(-45deg);
-  -ms-transform: rotate(-45deg); /* IE 9 */
-  -webkit-transform: rotate(-45deg); /* Safari */
-}
-
-.lower-left-ribbon::after {
-  content: '';
-  position: absolute;
-  left: 0px;
-  top: -8px;
-  z-index: 10000;
-  border-left: 10px solid red;
-  border-right: 10px solid transparent;
-  border-bottom: 10px solid red;
-  border-top: 10px solid transparent;
-  border-radius: 100%;
-  transform: rotate(45deg);
-  -ms-transform: rotate(45deg); /* IE 9 */
-  -webkit-transform: rotate(45deg); /* Safari */
 }
