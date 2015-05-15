@@ -1,4 +1,4 @@
-#Avanoo coding test
-####CSS ribbons & SVG shapes
+#CSS Image recreation
+####Exercise to recreate 3D icon image using only HTML and CSS.
 
-![Avanoo](Avanoo_test_screenshot.png)
+![Test](Image_test_screenshot.png)
